@@ -12,4 +12,5 @@ For your final project, we'll be building a Command Line database application.
 4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
 
 ## Instructions
-1. Fork and clone the module one final project. The person who forked the lab should share the link with their teammates to clone. 
+1. Fork and clone the module one final project. The person who forked the lab should share the link with their teammate(s) to clone. As you work, be sure to create a flow of creating a branch, committing and pushing it up to master, merging, and having teammates pull down the new master.
+2. Before you start building, check out the files you have available in this repo. In the main directory, you've got a gemfile that gives you access to 
