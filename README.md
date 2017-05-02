@@ -37,7 +37,9 @@ Woah! What did we just do there? The first part is simple: we added the a line t
 
 8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
 
-For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Don't forget to use rake to 
+For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Once your file is ready, run rake -T to see which rake task you can use to acutally seed your database.
+
+9. 
 
 
 
