@@ -33,7 +33,8 @@ You should see the station inserted into your database. Cool! Now let's test our
 a = Line.create(name: "A")
 fulton.lines << a
 ```
-Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, again, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!!
+Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!! High fives all around.
+8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seeds file? It's a file, located in the db folder, where you create new 
 
 
   
