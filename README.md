@@ -146,4 +146,13 @@ def show_lines(lines)
    end
 end
 ```
+Now, add this method to the run method, and pass it the lines we got in the find_lines method. Finally, run ruby bin/run.rb. Woot, woot! We've got a working 'skateboard' version of our app. 
 
+## Next Steps
+  How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lot's of ways!
+  - Look for a .csv file or API that we can use to seed our database with lots and lots more data.
+  - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
+  - What if a user wants to search for another station after getting their results? What if they want to search fifty times in a row? 
+  -We already have our databases setup to search for a line's stations. How can we add that functionality to our app?
+  
+ Good luck making your snazzy CLI app. Remember the tools you have available to you (Pry! Rake!) and have fun! 
