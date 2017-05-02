@@ -59,12 +59,79 @@ We should see our welcome message printed. Rad!! But wait--why are we defining t
 
 10. Instead, let's create a Command Line Interface model in our lib directory. This model won't have a corresponding table, it's just going to be a place for us to write methods relating to the interface of our app. Now, let's move the greet method definition into the Command Line Interface model.
 
-Now, our bin/run.rb should just create a new instance of our Command Line Interface model and call the new instance method, greet.
+Now, our bin/run.rb should create a new instance of our Command Line Interface model and call the instance method, greet.
 
 ```
 new_cli = CommandLineInterface.new
 new_cli.greet
 ```
+Run ruby bin/run.rb to make sure everything works!
 
-  
+11. Alright, we've greeted our user, but so far we haven't given them any information that we worked so hard to store in our database. Let's give them some of our valuable data! First things first: how should we decide what to show our users? It would probably be overwhelming if we printed out every line for every station in New York city, so let's ask the user which station they'd like to see lines for.
 
+Create a new method in the Command Line Interface model:
+
+```
+def gets_user_input
+  puts "We can help you find which train lines are available at NYC subway stations."
+  puts "Enter a subway station to get started:"
+  gets.chomp
+end
+```
+
+Now, call it from the run file and run your app to make sure everything works!
+
+12. So, we've gotten an input from our user, but what do we do with the it?
+
+First let's think big picture: our goal is to take the user's input--a string of a station name--and use that name to find a station in our database. Then we want to grab all of that station's lines and output the lines to our user. 
+
+Now let's think about how we'll code out this process: first, we want a method that uses the station string to query our database, right? Know any activerecord methods we could use to find a station by its name?
+
+```
+def find_station(station)
+  Station.find_by(name: station)
+end
+```
+Okay, so now we can find our station, but how do we hand off the user's input to the find station method?
+
+We could do something like this in our run file...
+```
+new_cli = CommandLineInterface.new
+new_cli.greet
+input = new_cli.gets_user_input
+new_cli.find_station(input)
+```
+...but let's not!
+
+Instead, let's move our individual method calls from the run file to a runner method in our Command Line Interface model. 
+
+```
+
+def run
+  greet
+  input = gets_user_input
+  find_station(input)  
+end
+
+```
+And let's change our run file to just call the run method.
+
+13. So, we can greet our user, grab their input, and use that input to find a station. We're on the home stretch, but there are a few things left to do. First, we need to find the lines associated with the station, and then we need to output the lines to the user.
+
+First, let's make a method to access the station lines and add it to our run file:
+
+```
+def find_lines(station)
+  station.lines
+end
+
+```
+The find lines method takes in an instance of station and returns that station's lines. How can we pass the station that we found in find_station as the argument in find_lines? How about in our run file! Below we've set the return value of find_station to a variable, station. Now use that vairable to find the lines.
+
+```
+def run
+  greet
+  input = gets_user_input
+  station = find_station(input)  
+end
+```
