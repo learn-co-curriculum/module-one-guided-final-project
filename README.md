@@ -26,8 +26,15 @@ For your final project, we'll be building a Command Line database application.
 6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
 7. Now is a great time top open up your console in the terminal and make sure everything's working properly. Your database is empty at this point, so start by creating a new row in your table. For the train example, we'd do something like this:
 ```
-fulton = Station.new(name: "Fulton")
+fulton = Station.create(name: "Fulton")
 ```
+You should see the station inserted into your database. Cool! Now let's test our relationships:
+```
+a = Line.create(name: "A")
+fulton.lines << a
+```
+Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, again, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!!
+
 
   
 
