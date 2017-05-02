@@ -126,7 +126,7 @@ def find_lines(station)
 end
 
 ```
-The find lines method takes in an instance of station and returns that station's lines. How can we pass the station that we found in find_station as the argument in find_lines? How about in our run file! Below we've set the return value of find_station to a variable, station. Now use that vairable to find the lines.
+The find lines method takes in an instance of station and returns that station's lines. How can we pass the station that we found in find_station as the argument in find_lines? How about in our run file! Below we've set the return value of find_station to a variable, station. Now use that variable to find the lines.
 
 ```
 def run
@@ -135,3 +135,13 @@ def run
   station = find_station(input)  
 end
 ```
+14. Want to test out that the code we've written so far is working? Require 'pry' at the top of the Command Line Interface file, and binding.pry after calling find_lines. 
+
+15. Finally, let's output those lines to our users! Create a method that iterates over lines and outputs the line name to the console!
+
+```
+def show_lines(lines)
+  lines.each do |line|
+    puts line.name
+   end
+end
