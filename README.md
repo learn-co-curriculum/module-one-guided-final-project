@@ -37,11 +37,34 @@ Woah! What did we just do there? The first part is simple: we added the a line t
 
 8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
 
-For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Once your file is ready, run rake -T to see which rake task you can use to acutally seed your database.
+For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. 
 
-9. 
+You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Once your file is ready, run rake -T to see which rake task you can use to seed your database.
 
+9. Okay, so we've got our databases; we've got our models; and we've got our relationships set up between them. Now, what do we do with all this stuff? We don't want our users to have to use the console every time they want to see which train lines go through fulton station, so let's create a command line interface! 
 
+First things first, let's open up the runfile and create a method that greets our app user. Then, let's call the method.
+```
+def greet
+  puts 'Welcome to TrainFinder, the command line solution to for your MTA train-finding needs!"
+end
+
+greet
+```
+Now, let's run the file from the terminal:
+```
+ruby bin/run.rb
+```
+We should see our welcome message printed. Rad!! But wait--why are we defining this method in the runfile? Isn't that going to get messy? Answer: yes.
+
+10. Instead, let's create a Command Line Interface model in our lib directory. This model won't have a corresponding table, it's just going to be a place for us to write methods relating to the interface of our app. Now, let's move the greet method definition into the Command Line Interface model.
+
+Now, our bin/run.rb should just create a new instance of our Command Line Interface model and call the new instance method, greet.
+
+```
+new_cli = CommandLineInterface.new
+new_cli.greet
+```
 
   
 
