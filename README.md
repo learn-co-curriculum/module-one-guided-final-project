@@ -22,5 +22,7 @@ For your final project, we'll be building a Command Line database application.
     
     Whiteboard out your ideas and think about what columns you'll want in the corresponding tables, including foreign keys. Where are foreign keys stored in a many-to-many relationship? Get your data modeling approved by an instructor before moving on to the next step. 
 4. Make a new file for each model in your lib folder. What's the naming convention for a model filename? Check out previous labs for a reminder. Remember that activerecord gem from our gemfile? Make sure that every model with a corresponding database table inherits from activerecord. 
-5. Be sure to include the relationships between your models. The <a href="http://guides.rubyonrails.org/association_basics.html">activerecord documentation</a> is a great source if you get stuck!
-6. Create your database and migrations in the Terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
+5. Be sure to include the relationships between your models. The <a href="http://guides.rubyonrails.org/association_basics.html">activerecord documentation</a> is a great source if you get stuck! Check out the has_many :through section when setting up your many-to-many relationship.
+6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
+7. Now is a great time top open up your console in the terminal and make sure everything's working properly. Your database is empty at this point, so start by creating a new row in your table. For the train example, we'd do something like this:
+
