@@ -34,7 +34,7 @@ For your final project, we'll be building a Command Line database application.
 5. Be sure to include the relationships between your models. The <a href="http://guides.rubyonrails.org/association_basics.html">activerecord documentation</a> is a great source if you get stuck! Check out the ```has_many :through``` section when setting up your many-to-many relationship.
 
 ### Migrations
-6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
+6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run ```rake -T``` in your terminal for a refresher.) What are the naming conventions for migration files and table names?
 7. Now is a great time top open up your console in the terminal and make sure everything's working properly. Your database is empty at this point, so start by creating a new row in your table. For the train example, we'd do something like this:
 ```
 fulton = Station.create(name: "Fulton")
