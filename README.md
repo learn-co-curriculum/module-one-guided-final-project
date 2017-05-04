@@ -55,7 +55,9 @@ Enter the seeds file. What is a seed file? It's a file, located in the db folder
 
 For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. 
 
-You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Once your file is ready, run rake -T to see which rake task you can use to seed your database.
+You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. 
+
+Once your file is ready, run ```rake -T``` to see which rake task you can use to seed your database.
 
 
 ### CLI
