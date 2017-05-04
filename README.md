@@ -12,6 +12,8 @@ For your final project, we'll be building a Command Line database application.
 4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
 
 ## Instructions
+
+### Set Up and Planning
 1. Fork and clone the module one final project. The person who forked the lab should share the link with their teammate(s) to clone. As you work, be sure to create a flow of creating a branch, committing and pushing it up to master, merging, and having teammates pull down the new master.
 2. Before you start building, take a look at the files you have available in this repo. In the main directory, you've got a gemfile that gives you access to activerecord, pry, rake, and sqlite3 througout your app. Remember to bundle install! In the bin directory, you've got a run.rb file that you can run from the command line with 'ruby bin/run.rb.' In config, you've got your database set up with activerecord, as well as all of your models from the lib file made available to your database. In the lib directory, you'll be building all your models. 
 3. Your first goal should be to decide on your models and determine the relationships between them. You'll need one many-to-many relationship. 
@@ -21,8 +23,12 @@ For your final project, we'll be building a Command Line database application.
     -Tweet, Topic, Tweet topics: A Tweet has many topics and a topic has many tweets, tweet_topic belongs to tweet and topic
     
     Whiteboard out your ideas and think about what columns you'll want in the corresponding tables, including foreign keys. Where are foreign keys stored in a many-to-many relationship? Get your data modeling approved by an instructor before moving on to the next step. 
+    
+### Data Models    
 4. Make a new file for each model in your lib folder. What's the naming convention for a model filename? Check out previous labs for a reminder. Remember that activerecord gem from our gemfile? Make sure that every model with a corresponding database table inherits from activerecord. 
 5. Be sure to include the relationships between your models. The <a href="http://guides.rubyonrails.org/association_basics.html">activerecord documentation</a> is a great source if you get stuck! Check out the has_many :through section when setting up your many-to-many relationship.
+
+### Migrations
 6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
 7. Now is a great time top open up your console in the terminal and make sure everything's working properly. Your database is empty at this point, so start by creating a new row in your table. For the train example, we'd do something like this:
 ```
@@ -35,12 +41,15 @@ fulton.lines << a
 ```
 Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!! High fives all around.
 
+### Seeding the Database
 8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
 
 For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. 
 
 You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. Once your file is ready, run rake -T to see which rake task you can use to seed your database.
 
+
+### CLI
 9. Okay, so we've got our databases; we've got our models; and we've got our relationships set up between them. Now, what do we do with all this stuff? We don't want our users to have to use the console every time they want to see which train lines go through fulton station, so let's create a command line interface! 
 
 First things first, let's open up the runfile and create a method that greets our app user. Then, let's call the method.
@@ -150,9 +159,14 @@ Now, add this method to the run method, and pass it the lines we got in the find
 
 ## Next Steps
   How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lot's of ways!
-  - Look for a .csv file or API that we can use to seed our database with lots and lots more data.
+  - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
   - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
-  - What if a user wants to search for another station after getting their results? What if they want to search fifty times in a row? 
-  -We already have our databases setup to search for a line's stations. How can we add that functionality to our app?
+  - What if a user wants to search for another station after getting their results? What if they want to seach fifty different stations and then exit the app midway through a search? 
+  -In the console, we can find all the stations associated with a train line. How can we add that functionality to our app?
+  -Once a user choses a train line, could we open an mta web page corresponding with their selected line in the user's browser?
+  -Can we jazz up the look of our app with ascii text or fun colors?
   
- Good luck making your snazzy CLI app. Remember the tools you have available to you (Pry! Rake!) and have fun! 
+## Final Steps
+- Prepare a video demo describing how a user would interact with your working project.
+- OPTIONAL, BUT RECOMMENDED: Write a blog post about the project and process.
+ 
