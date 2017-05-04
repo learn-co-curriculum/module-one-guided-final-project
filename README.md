@@ -78,7 +78,7 @@ new_cli.greet
 ```
 Run ruby bin/run.rb to make sure everything works!
 
-![hello](https://media.giphy.com/media/3oKIPsx2VAYAgEHC12/giphy.gif)
+![hello](https://media.giphy.com/media/fTI9mBoWLef8k/giphy.gif)
 
 11. Alright, we've greeted our user, but so far we haven't given them any information that we worked so hard to store in our database. Let's give them some of our valuable data! First things first: how should we decide what to show our users? It would probably be overwhelming if we printed out every line for every station in New York city, so let's ask the user which station they'd like to see lines for.
 
