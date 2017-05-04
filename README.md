@@ -14,12 +14,13 @@ For your final project, we'll be building a Command Line database application.
 ## Instructions
 
 ### Set Up and Planning
-1. Fork and clone the module one final project. The person who forked the lab should share the link with their teammate(s) to clone. As you work, be sure to create a flow of creating a branch, committing and pushing it up to master, merging, and having teammates pull down the new master.
+1. Fork and clone the module one final project. The person who forked the lab should share the link with their teammate(s) to clone, and add them as collaborators. As you work, be sure to create a flow of creating a branch, committing and pushing it up to master, merging, and having teammates pull down the new master.
 2. Before you start building, take a look at the files you have available in this repo. 
     - In the main directory, you've got a gemfile that gives you access to activerecord, pry, rake, and sqlite3. Remember to bundle install! 
     - In the bin directory, you've got a run.rb file that you can run from the command line with ```ruby bin/run.rb.``` 
     - In config, you've got your database set up with activerecord, as well as all of your models from the lib file made available to your database. 
     - In the lib directory, you'll be building all your models. 
+    - Note that there is no spec directory. Your goal is to use Behavior Driven Development to confirm that your code is doing what it should. This means instead of running rspec or learn, you should frequently be opening up the rake console and confirming that your methods and associations work.
 
 3. Your first goal should be to decide on your models and determine the relationships between them. You'll need one many-to-many relationship. 
   Here are some ideas: 
