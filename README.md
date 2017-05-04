@@ -110,10 +110,9 @@ Now let's think about how we'll code out this process: first, we want a method t
 
 Think on it....
 
-
 Keep thinking...
 
-......** inserts jeopardy music here **.....
+[inserts jeopardy music here]
 
 Alright, have you got an idea?
 
