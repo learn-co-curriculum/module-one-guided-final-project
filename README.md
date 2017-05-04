@@ -41,7 +41,7 @@ fulton.lines << a
 ```
 Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!! High fives all around.
 
-![train](https://media.giphy.com/media/NGSbD5vI6lUvC/giphy.gif) 
+![celebration](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
 
 ### Seeding the Database
 8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
@@ -77,8 +77,6 @@ new_cli = CommandLineInterface.new
 new_cli.greet
 ```
 Run ruby bin/run.rb to make sure everything works!
-
-![hello](https://media.giphy.com/media/fTI9mBoWLef8k/giphy.gif)
 
 11. Alright, we've greeted our user, but so far we haven't given them any information that we worked so hard to store in our database. Let's give them some of our valuable data! First things first: how should we decide what to show our users? It would probably be overwhelming if we printed out every line for every station in New York city, so let's ask the user which station they'd like to see lines for.
 
@@ -161,7 +159,7 @@ end
 ```
 Now, add this method to the run method, and pass it the lines we got in the find_lines method. Finally, run ruby bin/run.rb. Woot, woot! We've got a working 'skateboard' version of our app. 
 
-![celebration](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
+![party](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
 ## Next Steps
   How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lot's of ways!
   - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
