@@ -79,7 +79,7 @@ We should see our welcome message printed. Rad!! But wait--why are we defining t
 
 10. Instead, let's create a Command Line Interface model in our lib directory. This model won't have a corresponding table, it's just going to be a place for us to write methods relating to the interface of our app. Now, let's move the greet method definition into the Command Line Interface model.
 
-Now, our bin/run.rb should create a new instance of our Command Line Interface model and call the instance method, greet.
+Now, our ```bin/run.rb``` should create a new instance of our Command Line Interface model and call the instance method, greet.
 
 ```
 new_cli = CommandLineInterface.new
