@@ -175,9 +175,9 @@ Now, add this method to the run method, and pass it the lines we got in the find
   - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
   - Build out full CRUD functionality from the command line.
   - Allow the user to do multiple searches without having to run the app each time. What if they want to seach fifty different stations and then exit the app midway through a search? 
-  -Add functionality using our existing data. In the console, we can find all the stations associated with a train line. How can we build that into our interface?
-  -Once a user choses a train line, open an mta web page corresponding with their selected line in the user's browser.
-  -Can we jazz up the look of our app with ascii text or fun colors?
+  - Add functionality using our existing data. In the console, we can find all the stations associated with a train line. How can we build that into our interface?
+  - Once a user choses a train line, open an mta web page corresponding with their selected line in the user's browser.
+  - Can we jazz up the look of our app with ascii text or fun colors?
   
 ## Final Steps
 - Prepare a video demo describing how a user would interact with your working project.
