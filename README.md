@@ -177,7 +177,7 @@ Now, add this method to the run method, and pass it the lines we got in the find
   - Allow the user to do multiple searches without having to run the app each time. What if they want to seach fifty different stations and then exit the app midway through a search? 
   - Add functionality using our existing data. In the console, we can find all the stations associated with a train line. How can we build that into our interface?
   - Once a user choses a train line, open an mta web page corresponding with their selected line in the user's browser.
-  - Can we jazz up the look of our app with ascii text or fun colors?
+  - Use a gem jazz up the look of our app with ascii text or colors.
   
 ## Final Steps
 - Prepare a video demo describing how a user would interact with your working project.
