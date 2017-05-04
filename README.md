@@ -180,11 +180,11 @@ def show_lines(lines)
    end
 end
 ```
-Now, add this method to the run method, and pass it the lines we got in the find_lines method. Finally, run ruby bin/run.rb. Woot, woot! We've got a working 'skateboard' version of our app!! 
+Now, add this method to the run method, and pass it the lines we got in the ```find_lines method```. Finally, run ```ruby bin/run.rb```. Woot, woot! We've got a working 'skateboard' version of our app!! 
 
 ![party](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
 ## Next Steps
-  How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lot's of ways!
+  How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lots of ways!
   - Format the output of train lines to be a less bland. Perhaps the lines could be separated with commas, or interpolated to read 'A line'.
   - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
   - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
