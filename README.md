@@ -173,7 +173,7 @@ Now, add this method to the run method, and pass it the lines we got in the find
   - Format the output of train lines to be a less bland. Perhaps the lines could be separated with commas, or interpolated to read 'A line'.
   - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
   - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
-  - Build out full CRUD functionality from the command line.
+  - Build out full CRUD functionality for one of our models from the command line.
   - Allow the user to do multiple searches without having to run the app each time. What if they want to seach fifty different stations and then exit the app midway through a search? 
   - Add functionality using our existing data. In the console, we can find all the stations associated with a train line. How can we build that into our interface?
   - Once a user choses a train line, open an mta web page corresponding with their selected line in the user's browser.
