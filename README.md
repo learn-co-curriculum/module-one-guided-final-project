@@ -78,7 +78,7 @@ new_cli.greet
 ```
 Run ruby bin/run.rb to make sure everything works!
 
-![hello](https://media.giphy.com/media/l44Qqz6gO6JiVV3pu/giphy.gif)
+![hello](https://media.giphy.com/media/3oKIPsx2VAYAgEHC12/giphy.gif)
 
 11. Alright, we've greeted our user, but so far we haven't given them any information that we worked so hard to store in our database. Let's give them some of our valuable data! First things first: how should we decide what to show our users? It would probably be overwhelming if we printed out every line for every station in New York city, so let's ask the user which station they'd like to see lines for.
 
@@ -161,6 +161,7 @@ end
 ```
 Now, add this method to the run method, and pass it the lines we got in the find_lines method. Finally, run ruby bin/run.rb. Woot, woot! We've got a working 'skateboard' version of our app. 
 
+![celebration](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
 ## Next Steps
   How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lot's of ways!
   - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
