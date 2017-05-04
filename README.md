@@ -113,16 +113,19 @@ Think on it....
 
 Keep thinking...
 
-......**jeopardy music**.....
+......** inserts jeopardy music here **.....
 
+Alright, have you got an idea?
 
-Okay, how about this activerecord method:
+Is it this activerecord method?
 
 ```
 def find_station(station)
   Station.find_by(name: station)
 end
 ```
+Nice!
+
 Okay, so now we can find our station, but how do we hand off the user's input to the find station method?
 
 We could do something like this in our run file...
