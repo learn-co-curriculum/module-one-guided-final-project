@@ -29,7 +29,7 @@ For your final project, we'll be building a Command Line database application.
 5. Be sure to include the relationships between your models. The <a href="http://guides.rubyonrails.org/association_basics.html">activerecord documentation</a> is a great source if you get stuck! Check out the has_many :through section when setting up your many-to-many relationship.
 
 ### Migrations
-![train](https://media.giphy.com/media/ghPfNK0PIAeY0/giphy.gif) 6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
+6. Create your database and migrations in the terminal (keeping in mind that you have Rake available to you! Run rake -T in your terminal for a refresher.) What are the naming conventions for migration files and table names?
 7. Now is a great time top open up your console in the terminal and make sure everything's working properly. Your database is empty at this point, so start by creating a new row in your table. For the train example, we'd do something like this:
 ```
 fulton = Station.create(name: "Fulton")
@@ -40,6 +40,8 @@ a = Line.create(name: "A")
 fulton.lines << a
 ```
 Woah! What did we just do there? The first part is simple: we added the a line to our line table. Then, we accessed our station, Fulton Station, and accessed its array of lines. (Because a station has many lines, right?) Finally, we pushed the A line into Fulton's lines. Amazing!! High fives all around.
+
+![train](https://media.giphy.com/media/NGSbD5vI6lUvC/giphy.gif) 
 
 ### Seeding the Database
 8. At this point, we could continue adding items to our database through the console, but let's be real. There are 425 train stations in New York--entering them individually would take forever!! There must be a better way... Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
@@ -75,6 +77,8 @@ new_cli = CommandLineInterface.new
 new_cli.greet
 ```
 Run ruby bin/run.rb to make sure everything works!
+
+![hello](https://media.giphy.com/media/l44Qqz6gO6JiVV3pu/giphy.gif)
 
 11. Alright, we've greeted our user, but so far we haven't given them any information that we worked so hard to store in our database. Let's give them some of our valuable data! First things first: how should we decide what to show our users? It would probably be overwhelming if we printed out every line for every station in New York city, so let's ask the user which station they'd like to see lines for.
 
