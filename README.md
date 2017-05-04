@@ -8,7 +8,7 @@ For your final project, we'll be building a Command Line database application.
 
 1. Build at least three models with corresponding tables, including a join table
 2. Access a Sqlite3 Database using ActiveRecord
-3. Build out a CLI that allows users to interact with your database.
+3. Build out a CLI that allows users to interact with your database
 4. Use good OO design patterns. You should have separate models for your runner and CLI interface.
 
 ## Instructions
