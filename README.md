@@ -28,7 +28,7 @@ For your final project, we'll be building a Command Line database application.
     - Movie, Actor, Movie Actors: A movie has many actors and an actor has many movies, movie_actors belongs to movie and actor
     - Tweet, Topic, Tweet topics: A tweet has many topics and a topic has many tweets, tweet_topic belongs to tweet and topic
     
-    Whiteboard out your ideas and think about what columns you'll want in the corresponding tables, including foreign keys. Where are foreign keys stored in a many-to-many relationship? Get your data modeling approved by an instructor before moving on to the next step. 
+    Whiteboard out your ideas and think about what columns you'll want in the corresponding tables, including foreign keys. Where are foreign keys stored in a many-to-many relationship? **Get your data modeling approved by an instructor before moving on to the next step.**
     
 ### Data Models    
 4. Make a new file for each model in your lib folder. What's the naming convention for a model filename? Check out previous labs for a reminder. Remember that activerecord gem from our gemfile? Make sure that every model inherits from activerecord base. 
@@ -55,6 +55,22 @@ Woah! What did we just do there? The first part is simple: we added the a line t
 Enter the seeds file. What is a seed file? It's a file, located in the db folder, where you create new instances of your classes and save them to your database. There are several ways this could happen. You could iterate over as csv file, for example, pulling out relevant data, and creating a new row in your database for every row in the file. 
 
 For now, let's just manually create some objects, and set up the relationships between them. You can do it in exactly the same way we did in the console. 
+
+```
+c = Line.create([{name: "C"}, {name: "J"}, {name: "Z"}])
+
+#we can give the create method and array of hashes to create multiple stations at once.
+    
+broad = Station.create(name: "Broad Street")
+
+fulton.lines << c
+fulton.lines << j
+fulton.lines << z
+
+broad.lines << j
+broad.lines << z
+
+```
 
 You'll want to make sure you have enough data to play around with once you get your command line interface up and running. Five to ten instances of each model, as well as the corresponding relationships should be enough. You can always add more later. 
 
@@ -186,14 +202,14 @@ Now, add this method to the run method, and pass it the lines we got in the ```f
 ![party](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
 ## Next Steps
   How can we improve on our CLI app to have a motorcycle version and eventually a cadillac convertible version? Lots of ways!
-  - Format the output of train lines to be a less bland. Perhaps the lines could be separated with commas, or interpolated to read 'A line'.
-  - Look for a .csv file or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
+  - Format the output of train lines to be less bland. Perhaps the lines could be separated with commas, or interpolated to read 'A line'.
+  - Look for a <a href="http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv">.csv file</a> or API that we can use to seed our database with lots and lots more data. How could you seed a database with rows from a csv file or with JSON data from an API? 
   - Find a way for our program to not break if a user inputs a station name IN ALL CAPS, or if their cat walks over the keyboard and enters "sfudihdsuifhsidu."
   - Build out full CRUD functionality for one of our models from the command line.
   - Allow the user to do multiple searches without having to run the app each time. What if they want to seach fifty different stations and then exit the app midway through a search? 
   - Add functionality using our existing data. In the console, we can find all the stations associated with a train line. How can we build that into our interface?
   - Once a user choses a train line, open an mta web page corresponding with their selected line in the user's browser.
-  - Use a gem jazz up the look of our app with ascii text or colors.
+  - Use a gem jazz up the look of our app with <a href="https://github.com/miketierney/artii">ascii text</a> or <a href="https://rubygems.org/gems/colorize/versions/0.8.1">colors</a>.
   
 ## Final Steps
 - Prepare a video demo describing how a user would interact with your working project.
